@@ -1,4 +1,4 @@
-package func1
+package getip
 
 import (
 	"encoding/json"
@@ -14,7 +14,7 @@ type Info struct {
 	Country_code string `json:"cc"`
 }
 
-func GetInfo(url string) (Info) {
+func GetInfo(url string) Info {
 
 	//fmt.Println(reflect.TypeOf(Info{}).NumField()) // this return 3
 	client := http.Client{Timeout: 10 * time.Second} //Timeout 10 초의 속성을 가진 Client 객체 생성
